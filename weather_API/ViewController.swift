@@ -8,12 +8,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+     // MARK: - @IBOutlets
+//    @IBOutlet var labelOutlet: UILabel!
+    
+     // MARK: -  private property
+    private let city = "Moscow"
+    private let networkManager = NetworkManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        networkManager.fetchData(for: city, label: labelOutlet)
     }
-
-
+    
+    
 }
+
 
