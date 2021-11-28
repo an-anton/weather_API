@@ -16,6 +16,7 @@
 		2731DC0127510C84009DB059 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2731DC0027510C84009DB059 /* NetworkManager.swift */; };
 		27A19B3427538246009986A6 /* WeatherCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A19B3327538245009986A6 /* WeatherCollectionViewController.swift */; };
 		27A19B382753F53E009986A6 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A19B372753F53E009986A6 /* CustomCollectionViewCell.swift */; };
+		27A19B3A27540F9E009986A6 /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A19B3927540F9D009986A6 /* AddCityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2731DC0027510C84009DB059 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		27A19B3327538245009986A6 /* WeatherCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCollectionViewController.swift; sourceTree = "<group>"; };
 		27A19B372753F53E009986A6 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCollectionViewCell.swift; path = weather_API/Storyboards/CustomCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		27A19B3927540F9D009986A6 /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddCityViewController.swift; path = weather_API/Storyboards/AddCityViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		27A19B352753824C009986A6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				27A19B3927540F9D009986A6 /* AddCityViewController.swift */,
 				27A19B372753F53E009986A6 /* CustomCollectionViewCell.swift */,
 				27A19B3327538245009986A6 /* WeatherCollectionViewController.swift */,
 			);
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2731DBFE27510106009DB059 /* Weather.swift in Sources */,
+				27A19B3A27540F9E009986A6 /* AddCityViewController.swift in Sources */,
 				27A19B382753F53E009986A6 /* CustomCollectionViewCell.swift in Sources */,
 				2731DC0127510C84009DB059 /* NetworkManager.swift in Sources */,
 				27A19B3427538246009986A6 /* WeatherCollectionViewController.swift in Sources */,

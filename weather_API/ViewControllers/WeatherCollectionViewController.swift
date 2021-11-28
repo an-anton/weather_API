@@ -13,6 +13,11 @@ class WeatherCollectionViewController: UICollectionViewController {
     private var citys: [String] = ["Moscow", "Samara", "Ufa"]
     private let netManager = NetworkManager()
     
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        
+    }
+    
 
     // MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -25,6 +30,14 @@ class WeatherCollectionViewController: UICollectionViewController {
         let city = citys[indexPath.item]
         netManager.fetchData(for: city, label: cell.itemLabel)
         return cell
+    }
+     // MARK: - NAVIGATION
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard let addCityVC = segue.source as? AddCityViewController else { return }
+        guard let newCity = addCityVC.addCityTextField.text else { return }
+        citys.append(newCity)
+        print(citys)
+        collectionView.reloadData()
     }
 }
  // MARK: - EXTENSION
@@ -49,7 +62,7 @@ extension WeatherCollectionViewController: UICollectionViewDelegateFlowLayout {
         let countItem: CGFloat = 2
         let margin = CGFloat(20 * (countItem + 1))
         let widthItem = (view.bounds.width - margin) / countItem
-       
         return widthItem
     }
 }
+

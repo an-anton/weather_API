@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -57,11 +58,52 @@
                             <outlet property="delegate" destination="3EP-Kf-2Kl" id="cTy-kP-dxO"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Weather" id="arT-jw-cdE"/>
+                    <navigationItem key="navigationItem" title="Weather" id="arT-jw-cdE">
+                        <barButtonItem key="rightBarButtonItem" title="Add city" id="aoR-ua-Wvr">
+                            <connections>
+                                <segue destination="HcQ-cl-D5O" kind="presentation" id="b1d-rV-fSu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHa-ke-Qui" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1752.1739130434785" y="120.53571428571428"/>
+            <point key="canvasLocation" x="1578" y="121"/>
+        </scene>
+        <!--Add city-->
+        <scene sceneID="BJd-Am-TP3">
+            <objects>
+                <viewController title="Add city" id="HcQ-cl-D5O" customClass="AddCityViewController" customModule="weather_API" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iTf-FR-hdq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epG-hg-cYe">
+                                <rect key="frame" x="40" y="150" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" returnKeyType="done" textContentType="address-level2"/>
+                                <connections>
+                                    <outlet property="delegate" destination="HcQ-cl-D5O" id="jNg-qf-Eqc"/>
+                                    <segue destination="bP7-9e-L4d" kind="unwind" unwindAction="unwindFor:" id="9be-lK-M8b"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yaz-Ua-vMF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="epG-hg-cYe" firstAttribute="leading" secondItem="Yaz-Ua-vMF" secondAttribute="leading" constant="40" id="d8f-5h-RxK"/>
+                            <constraint firstItem="epG-hg-cYe" firstAttribute="top" secondItem="Yaz-Ua-vMF" secondAttribute="top" constant="150" id="kAj-Gv-Foz"/>
+                            <constraint firstItem="Yaz-Ua-vMF" firstAttribute="trailing" secondItem="epG-hg-cYe" secondAttribute="trailing" constant="40" id="obq-lC-fNd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addCityTextField" destination="epG-hg-cYe" id="7gR-qF-gLh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OI2-ad-dcv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="bP7-9e-L4d" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2278" y="121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vfW-lj-HCJ">
