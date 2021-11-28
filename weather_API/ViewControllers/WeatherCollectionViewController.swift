@@ -7,24 +7,23 @@
 
 import UIKit
 
-
-
 class WeatherCollectionViewController: UICollectionViewController {
 
     // MARK: - PRIVATE PROPERTIES
-    private var citys: [Weather] = []
+    private var citys: [String] = ["Moscow", "Samara", "Ufa"]
     private let netManager = NetworkManager()
     
 
     // MARK: - UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return citys.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCollectionViewCell
         cell.layer.cornerRadius = calculateSizeItem() / 8
-        netManager.fetchData(for: "Moscow", label: cell.itemLabel)
+        let city = citys[indexPath.item]
+        netManager.fetchData(for: city, label: cell.itemLabel)
         return cell
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3EP-Kf-2Kl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bn0-uD-A65">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Weather Collection View Controller-->
+        <!--Weather-->
         <scene sceneID="aPo-LI-qoM">
             <objects>
                 <collectionViewController id="3EP-Kf-2Kl" customClass="WeatherCollectionViewController" customModule="weather_API" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,8 +57,27 @@
                             <outlet property="delegate" destination="3EP-Kf-2Kl" id="cTy-kP-dxO"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Weather" id="arT-jw-cdE"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHa-ke-Qui" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1752.1739130434785" y="120.53571428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vfW-lj-HCJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bn0-uD-A65" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="5lY-Xw-9UP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3EP-Kf-2Kl" kind="relationship" relationship="rootViewController" id="5j3-kX-AW0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N7r-7n-GoW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="842.02898550724649" y="120.53571428571428"/>
         </scene>
