@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cWh-ta-Cyb">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cWh-ta-Cyb">
                             <size key="itemSize" width="200" height="200"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -38,9 +38,14 @@
                                             <nil key="highlightedColor"/>
                                             <size key="shadowOffset" width="0.0" height="0.0"/>
                                         </label>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="6Mt-hj-QL7">
+                                            <rect key="frame" x="70" y="70" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="6Mt-hj-QL7" firstAttribute="centerX" secondItem="nbQ-iM-wL5" secondAttribute="centerX" id="7o4-0d-NVF"/>
                                         <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ffq-nW-x8k" secondAttribute="trailing" constant="117.5" id="RxK-1i-d8p"/>
+                                        <constraint firstItem="6Mt-hj-QL7" firstAttribute="centerY" secondItem="nbQ-iM-wL5" secondAttribute="centerY" id="lN3-VY-sLs"/>
                                         <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="ffq-nW-x8k" secondAttribute="bottom" constant="138" id="maX-dw-aHA"/>
                                         <constraint firstItem="ffq-nW-x8k" firstAttribute="leading" secondItem="nbQ-iM-wL5" secondAttribute="leading" constant="5" id="xAL-a5-4En"/>
                                         <constraint firstItem="ffq-nW-x8k" firstAttribute="top" secondItem="nbQ-iM-wL5" secondAttribute="top" constant="20" id="z0Z-qv-5yW"/>

@@ -43,7 +43,7 @@ class WeatherCollectionViewController: UICollectionViewController {
  // MARK: - EXTENSION
 extension WeatherCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: calculateSizeItem(), height: calculateSizeItem() / 1.5)
+        CGSize(width: calculateSizeItem(), height: calculateSizeItem() / 1.5 )
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -61,7 +61,7 @@ extension WeatherCollectionViewController: UICollectionViewDelegateFlowLayout {
     func calculateSizeItem() -> CGFloat {
         let countItem: CGFloat = 2
         let margin = CGFloat(20 * (countItem + 1))
-        let widthItem = (view.bounds.width - margin) / countItem
+        let widthItem = (collectionView.bounds.width - margin) / countItem
         return widthItem
     }
 }
